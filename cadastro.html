@@ -5,7 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro | Quatro Patas</title>
 </head>
-<body>
+<body class="grid-layout">
     
+
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="nav-logo">ONG Quatro Patas</a>
+            <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="projeto.html">Projetos Sociais</a></li>
+                <li><a href="cadastro.html">Seja um Voluntário</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="container section-spacing">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6">
+                    <h1 class="font-size-h1">Faça parte da equipe, seja um voluntário Quatro Patas!</h1>
+                    <p class="font-size-lg lead">Se você tem interesse em dedicar um pouco do seu tempo para lutar em prol do bem-estar, faça parte dos voluntáriados.</p>
+                    <img src="assets/imagens/imagem2.jpg" alt="imagem volunatrio 2" class="img-fluid rounded section-spacing-bottom">
+                </div>
+                <div class="col-12 col-md-6">
+                    <form id="form-voluntario" class="form-styled" novalidate>
+                        <fieldset>
+                            <legend>Cadastro - ONG Quatro Patas</legend>
+                            <div class="form-group">
+                                <label for="nome">Nome Completo:</label>
+                                <input type="text" name="nome" id="nome" class="form-control" placeholder="Seu nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail:</label>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone:</label>
+                                <input type="number" id="telefone" class="form-control" placeholder="(00) 00000-0000">
+                            </div>
+                            <div class="form-group">
+                                <label for="idade">Idade:</label>
+                                <input type="number" name="idade" id="idade" min="18" max="80" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="endereco">Endereço:</label>
+                                <input type="text" name="endereco" id="endereco" placeholder="Digite seu Endereço" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cidade">Cidade:</label>
+                                <input type="text" name="cidade" id="cidade" placeholder="Digite sua Cidade" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cpf">CPF:</label>
+                                <input type="number" name="cpf" id="cpf" placeholder="000.000.000-00" required>
+                            </div>
+                            <div class="form-buttons">
+                                <button type="submit" class="btn btn-primary">Enviar Cadastro</button>
+                                <button type="reset" class="btn btn-secondary-outline">Limpar</button>
+                                <button type="button" class="btn btn-danger" disabled>Excluir (Desabilitado)</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div class="alert alert-success" id="alert-sucesso" role="alert" style="display: none;">
+            <strong>Sucesso!</strong> Seu cadastro foi enviado. Entraremos em contato em breve.
+        </div>
+        <div class="alert alert-danger" id="alert-erro" role="alert" style="display: none;">
+            <strong>Ops!</strong> Por favor, corrija os campos destacados.
+        </div>
+        <div class="modal" id="modal-confirmacao" style="display: none;">
+            <div class="modal-content">
+                <span class="modal-close" id="modal-close-btn">&times;</span>
+                <h2 class="font-size-h2">Cadastro Enviado!</h2>
+                <p>Obrigado por seu interesse em se juntar à Quatro Patas. Sua ajuda é fundamental!</p>
+                <button class="btn btn-primary" id="modal-ok-btn">Entendido</button>
+            </div>
+        </div>
+        <div class="toast" id="toast-notificacao" style="display: none;">
+            Formulário enviado!
+        </div>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="contanier">
+            <p>&copy; 2025 ONG Quatro Patas</p>
+        </div>
+    </footer>
 </body>
 </html>
