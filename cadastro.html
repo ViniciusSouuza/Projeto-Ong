@@ -31,42 +31,39 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <form id="form-voluntario" class="form-styled" novalidate>
-                        <fieldset>
-                            <legend>Cadastro - ONG Quatro Patas</legend>
-                            <div class="form-group">
-                                <label for="nome">Nome Completo:</label>
-                                <input type="text" name="nome" id="nome" class="form-control" placeholder="Seu nome" required>
+                       <div class="form-group">
+                            <label for="nome">Nome Completo:</label>
+                            <input type="text" name="nome" id="nome" class="form-control" placeholder="Seu nome" required>
                             </div>
-                            <div class="form-group">
-                                <label for="email">E-mail:</label>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="E-mail" required>
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="E-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone:</label>
+                            <input type="number" id="telefone" class="form-control" placeholder="(00) 00000-0000">
                             </div>
-                            <div class="form-group">
-                                <label for="telefone">Telefone:</label>
-                                <input type="number" id="telefone" class="form-control" placeholder="(00) 00000-0000">
+                        <div class="form-group">
+                            <label for="idade">Idade:</label>
+                            <input type="number" name="idade" id="idade" min="18" max="80" class="form-control" required>
                             </div>
-                            <div class="form-group">
-                                <label for="idade">Idade:</label>
-                                <input type="number" name="idade" id="idade" min="18" max="80" class="form-control" required>
+                        <div class="form-group">
+                            <label for="endereco">Endereço:</label>
+                            <input type="text" name="endereco" id="endereco" placeholder="Digite seu Endereço" class="form-control" required>
                             </div>
-                            <div class="form-group">
-                                <label for="endereco">Endereço:</label>
-                                <input type="text" name="endereco" id="endereco" placeholder="Digite seu Endereço" required>
+                        <div class="form-group">
+                            <label for="cidade">Cidade:</label>
+                            <input type="text" name="cidade" id="cidade" placeholder="Digite sua Cidade" class="form-control" required>
                             </div>
-                            <div class="form-group">
-                                <label for="cidade">Cidade:</label>
-                                <input type="text" name="cidade" id="cidade" placeholder="Digite sua Cidade" required>
+                        <div class="form-group">
+                            <label for="cpf">CPF:</label>
+                            <input type="number" name="cpf" id="cpf" placeholder="000.000.000-00" class="form-control" required>
                             </div>
-                            <div class="form-group">
-                                <label for="cpf">CPF:</label>
-                                <input type="number" name="cpf" id="cpf" placeholder="000.000.000-00" required>
+                        <div class="form-buttons">
+                            <button type="submit" class="btn btn-primary">Enviar Cadastro</button>
+                            <button type="reset" class="btn btn-secondary-outline">Limpar</button>
+                            <button type="button" class="btn btn-danger" disabled>Excluir (Desabilitado)</button>
                             </div>
-                            <div class="form-buttons">
-                                <button type="submit" class="btn btn-primary">Enviar Cadastro</button>
-                                <button type="reset" class="btn btn-secondary-outline">Limpar</button>
-                                <button type="button" class="btn btn-danger" disabled>Excluir (Desabilitado)</button>
-                            </div>
-                        </fieldset>
                     </form>
                 </div>
             </div>
@@ -93,7 +90,7 @@
     </main>
 
     <footer class="footer">
-        <div class="contanier">
+        <div class="container">
             <p>&copy; 2025 ONG Quatro Patas</p>
         </div>
     </footer>
