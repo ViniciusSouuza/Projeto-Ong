@@ -174,3 +174,55 @@ img { max-width: 100%; height: auto; }
 #page-content .error {
     color: var(--color-feedback-danger);
 }
+
+/* 3. LEIAUTE PRINCIPAL
+   --------------------------------- */
+.grid-layout {
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    min-height: 100vh;
+}
+.header { 
+    grid-area: header; 
+    background: var(--color-background-alt); 
+    box-shadow: var(--box-shadow); 
+    position: sticky; top: 0; z-index: 1000; 
+    border-bottom: 1px solid var(--color-border);
+}
+.main { grid-area: main; }
+.footer { 
+    grid-area: footer; 
+    background: var(--color-text); 
+    color: var(--color-background); 
+    padding: var(--space-md) 0; 
+    text-align: center; 
+}
+
+/* 4. SISTEMA DE GRID E CONTAINER
+   --------------------------------- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(var(--space-sm) * -1);
+    margin-right: calc(var(--space-sm) * -1);
+}
+[class^="col-"] {
+    position: relative;
+    width: 100%;
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+    margin-bottom: var(--space-sm);
+}
+.col-12 { flex: 0 0 100%; max-width: 100%; }
