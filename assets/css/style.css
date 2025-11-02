@@ -114,3 +114,63 @@ body.high-contrast .form-control {
     border: 2px solid var(--color-border);
     color: var(--color-text);
 }
+
+/* RESET E ESTILOS
+   --------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    transition: background-color 0.2s, color 0.2s; 
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+img { max-width: 100%; height: auto; }
+
+.font-size-h1 { font-size: var(--font-size-h1); font-weight: var(--font-weight-bold); line-height: 1.2; margin-bottom: var(--space-sm); }
+.font-size-h2 { font-size: var(--font-size-h2); font-weight: var(--font-weight-bold); line-height: 1.3; margin-bottom: var(--space-sm); }
+.font-size-h3 { font-size: var(--font-size-h3); font-weight: var(--font-weight-bold); line-height: 1.4; margin-bottom: var(--space-xs); }
+
+/* Classes Utilitárias */
+.img-fluid { max-width: 100%; height: auto; }
+.rounded { border-radius: var(--border-radius); }
+.section-spacing { padding: var(--space-xl) 0; }
+.section-spacing-bottom { margin-bottom: var(--space-lg); }
+.section-alternate { background-color: var(--color-background-alt); }
+
+/* Indicadores de Carregamento/Erro para SPA */
+#page-content .loading,
+#page-content .error {
+    text-align: center;
+    padding: var(--space-xxl) 0;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-muted);
+}
+#page-content .error {
+    color: var(--color-feedback-danger);
+}
